@@ -24,8 +24,8 @@ In this system, we demonstate polymorphism through usage of inheritance and meth
     }
   ```
 ### Encapsulation
-- We use **private** attribute for **accountNumber**, **accountHolder** and **interestRate** because we don't want any other class to directly access it and modify it.
-- We also use **protected** attribute for balance because we are planning to use it in subclass in **SavingsAccount** to calculate interest.
+- We use **private** attribute for **accountNumber** and **accountHolder** in **Account** class AND **interestRate** in **SavingsAccount** class because we don't want any other class to directly access it and modify it.
+- We also use **protected** attribute for **balance** in **Account** class because we are planning to use it in subclass in **SavingsAccount** to calculate **calculateInterest()** method.
 - We use **public** **toString** method in **'Account'** class, so that the private attribute inside such as **accountNumber** and **accountHolder** can be access by other class.
 ```
 public String toString() {
