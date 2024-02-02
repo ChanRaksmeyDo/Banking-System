@@ -9,8 +9,26 @@ The Banking System is a Java-based application designed to manage bank accounts,
 The **SavingsAccount** class inherits from **Account** class which they share a common interface for withdraw() and deposit() operation.
 ### Polymorphism
 In this system, we demonstate polymorphism through usage of inheritance and method overriding
-**Method Overriding:** We override the **withdraw** method in the **SavingsAccount** class to implement specific behavior for savings accounts, such as applying penalties for over withdrawal accounts.
+- **Method Overriding:** We override the **withdraw** method in the **SavingsAccount** class to implement specific behavior for savings accounts, such as applying penalties for over withdrawal accounts.
+  ```
+  @Override
+    public void withdraw(double withdrawAmount) {
+        if (withdrawAmount > 0 && withdrawAmount <= this.balance) {
+            this.balance -= withdrawAmount;
+            System.out.println("Withdrew $" + withdrawAmount + ". New balance: $" + this.balance);
+        } else {
+            System.out.println("Insufficient funds for withdrawal.");
+            this.balance -= 0.5;// Apply penalty
+            System.out.println("Penalty charged. New balance: $" + this.balance);
+        }
+    }
+  ```
 ### Encapsulation
 - We use **private** attribute for **accountNumber**, **accountHolder** and **interestRate** because we don't want any other class to directly access it and modify it.
 - We also use **protected** attribute for balance because we are planning to use it in subclass in **SavingsAccount** to calculate interest.
 - We use **public** **toString** method in **'Account'** class, so that the private attribute inside such as **accountNumber** and **accountHolder** can be access by other class.
+```
+public String toString() {
+        return "Account Number: " + this.accountNumber + "\nAccount Holder: " + this.accountHolder + "\nBalance: $" + this.balance;
+    }
+```
