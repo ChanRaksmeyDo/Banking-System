@@ -11,6 +11,6 @@ The **SavingsAccount** class inherits from **Account** class which they share a 
 In this system, we demonstate polymorphism through usage of inheritance and method overriding
 **Method Overriding:** We override the **withdraw** method in the **SavingsAccount** class to implement specific behavior for savings accounts, such as applying penalties for over withdrawal accounts.
 ### Encapsulation
-We use **private** attribute for **accountNumber**, **accountHolder** and **interestRate** because we don't want any other class to directly access it and modify it.
-We also use **protected** attribute for balance because we are planning to use it in subclass in **SavingsAccount** to calculate interest.
-We use **public** **toString** method in **'Account'** class, so that the private attribute inside such as **accountNumber** and **accountHolder** can be access by other class.
+- We use **private** attribute for **accountNumber**, **accountHolder** and **interestRate** because we don't want any other class to directly access it and modify it.
+- We also use **protected** attribute for balance because we are planning to use it in subclass in **SavingsAccount** to calculate interest.
+- We use **public** **toString** method in **'Account'** class, so that the private attribute inside such as **accountNumber** and **accountHolder** can be access by other class.
