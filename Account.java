@@ -31,14 +31,6 @@ class Account {
         }
     }
 
-    //Get Account Number
-    public String getAccountNumber() {
-        return this.accountNumber;
-    }
-    //Get Account Holder
-    public String getAccountHolder() {
-        return this.accountHolder;
-    }
 
     //Encapsulation toString method
     public String toString(){
